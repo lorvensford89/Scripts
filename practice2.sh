@@ -66,3 +66,12 @@ result=$(echo "scale=2; $a / $b" | bc)
 echo "Storing floating-point number in a variable and use it: $result"
 
 # File checks
+mydir2=/home/el
+if [ -d $mydir2 ]
+then
+echo "The $mydir2 directory exists."
+cd "$mydir2"
+ls
+else
+echo "The $mydir2 does not exist."
+fi
