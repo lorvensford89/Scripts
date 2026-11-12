@@ -1,8 +1,9 @@
 #!/bin/bash
 # This is a second comment
-pwd
+mydir=$(pwd)
 whoami
 ls
+echo "My working directory is: $mydir"
 
 echo "This is a preparation for completing the 3rd project."
 echo "I am learning DevOps."
