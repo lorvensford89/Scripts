@@ -37,9 +37,21 @@ fi
 # Comparison
 val1=text
 val2="another text"
-if [ $val1 \> $val2 ]
+if [ "$val1" \> "$val2" ]
 then
 echo "$val1 is greater than $val2"
 else
 echo "$val1 is less than $val2"
+fi
+
+num1=45
+num2=76
+if [ $num1 -gt $num2 ]
+then
+echo "$num1 is greater than $num2"
+elif [ $num1 -lt $num2 ]
+then 
+echo "$num1 is less than $num2"
+else
+echo "$num1 is equal to $num2"
 fi
