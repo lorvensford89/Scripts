@@ -33,3 +33,13 @@ echo "The user doesn't exist but anyway there is a directory under /home"
 else
 echo "The user $user doesn't exist"
 fi
+
+# Comparison
+val1=text
+val2="another text"
+if [ $val1 \> $val2 ]
+then
+echo "$val1 is greater than $val2"
+else
+echo "$val1 is less than $val2"
+fi
