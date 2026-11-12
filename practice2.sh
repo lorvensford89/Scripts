@@ -15,9 +15,21 @@ person="EL"
 echo "Home for the current user is: $HOME"
 echo "$person is a great man, he is $age years old."
 
-#Mathematical operations
+# Mathematical operations
 var1=$((5 + 5))
 var2=$(($var1 * 2))
 echo "I have used mathematical operations."
 echo "Var1 = $var1"
 echo "Var2 = $var2"
+
+# Conditional statement
+user=el
+if grep $user /etc/passwd
+then
+echo "The user $user Exists"
+elif ls /home
+then
+echo "The user doesn't exist but anyway there is a directory under /home"
+else
+echo "The user $user doesn't exist"
+fi
