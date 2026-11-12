@@ -64,3 +64,5 @@ echo "scale=2; $a / $b" | bc
 echo $((a % b))
 result=$(echo "scale=2; $a / $b" | bc)
 echo "Storing floating-point number in a variable and use it: $result"
+
+# File checks
