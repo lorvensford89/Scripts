@@ -1,10 +1,9 @@
 #!/bin/bash
 
 : '
-Напиши bash-скрипт. Скрипт запускается с одним параметром. 
-Параметр текстовый.
-Скрипт выводит значение параметра.
-Если параметр — число, то должно выводиться сообщение о некорректности ввода.'
+Write a bash script. The script is run with one parameter. It is a text parameter.
+The script outputs the value of the parameter.
+If the parameter is a number, the script must output an invalid input message.'
 
 if [[ $# -ne 1 ]]; then
     echo "ERROR: One parameter is required for running this script."
