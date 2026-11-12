@@ -14,3 +14,10 @@ person="EL"
 # Use of variables(Environment's and User's)
 echo "Home for the current user is: $HOME"
 echo "$person is a great man, he is $age years old."
+
+#Mathematical operations
+var1=$((5 + 5))
+var2=$(($var1 * 2))
+echo "I have used mathematical operations."
+echo "Var1 = $var1"
+echo "Var2 = $var2"
