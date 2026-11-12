@@ -55,3 +55,12 @@ echo "$num1 is less than $num2"
 else
 echo "$num1 is equal to $num2"
 fi
+
+# Using floating-point numbers
+a=7
+b=2
+echo $((a + b))
+echo "scale=2; $a / $b" | bc
+echo $((a % b))
+result=$(echo "scale=2; $a / $b" | bc)
+echo "Storing floating-point number in a variable and use it: $result"
