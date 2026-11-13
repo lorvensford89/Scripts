@@ -36,13 +36,16 @@ get_background() {
     esac
 }
 
-# Font colors
-FG_WHITE="\033[37m"
-FG_RED="\033[31m"
-FG_GREEN="\033[32m"
-FG_BLUE="\033[34m"
+                                            # 1 - white
+# Font colors                               # 2 - red
+FG_WHITE="\033[37m"                         # 3 - green
+FG_RED="\033[31m"                           # 4 - blue
+FG_GREEN="\033[32m"                         # 5 - purple
+FG_BLUE="\033[34m"                          # 6 - black
 FG_PURPLE="\033[35m"
 FG_BLACK="\033[30m"
+
+
 get_font() {
     case $1 in
         1) echo "$FG_WHITE" ;;
