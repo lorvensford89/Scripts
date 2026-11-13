@@ -119,5 +119,4 @@ print_information() {
 }
 
 
-OUTPUT=$(print_information)
-echo "$OUTPUT"
+print_information
