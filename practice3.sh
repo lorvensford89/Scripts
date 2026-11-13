@@ -20,4 +20,4 @@ personal_info() {
     lines 1
 }
 
-personal_info
+if [[ $1 ]]

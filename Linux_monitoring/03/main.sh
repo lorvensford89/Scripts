@@ -18,3 +18,18 @@ and offering to call the script again. After the message output, the program
 should exit correctly.
 '
 
+if [[ "$#" -ne 4 ]]; then
+    echo "ERROR: The script requires four(4) parameters"
+    exit 1
+fi
+
+
+for parameter in "$@"; do
+    if ! [[ "$parameter" =~ ^[1-6]$ ]]; then
+        echo "ERROR: Each parameter should be equal to 1, 2, 3, 4, 5 or 6"
+        exit 1
+    fi
+done
+
+
+
