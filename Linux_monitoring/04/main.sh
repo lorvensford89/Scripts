@@ -11,15 +11,6 @@ CONFIGURATION_FILE="$(dirname "$0")/configuration.conf"
 
 if [[ -f "$CONFIGURATION_FILE" ]]; then
     source "$CONFIGURATION_FILE"
-else
-    echo "ERROR: Missing configuration file."
-    echo "It must contain: "
-    echo 
-    echo "column1_background=2"
-    echo "column1_font_color=4"
-    echo "column2_background=5"
-    echo "column2_font_color=1"
-    exit 1
 fi
 
 # Default messages
