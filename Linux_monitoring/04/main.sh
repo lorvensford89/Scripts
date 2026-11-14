@@ -64,13 +64,13 @@ get_font() {
 RESET="\033[0m"
 
 # Parameter validation
-# for number in "$column1_background" "$column1_font_color" "$column2_background" "$column2_font_color"; do
-#     if [[ ! "$number" =~ ^[1-6]$ ]]; then
-#         echo "ERROR: colour values must be numbers from 1 to 6."
-#         echo "Modify the configuration file and run the script again."
-#         exit 1
-#     fi
-# done
+for number in "$column1_background" "$column1_font_color" "$column2_background" "$column2_font_color"; do
+    if [[ ! "$number" =~ ^[1-6]$ ]]; then
+        echo "ERROR: colour values must be numbers from 1 to 6."
+        echo "Modify the configuration file and run the script again."
+        exit 1
+    fi
+done
 
 # The font and background colours of one column must not match.
 if [ "$column1_background" -eq "$column1_font_color" ] || [ "$column2_background" -eq "$column2_font_color" ]; then
