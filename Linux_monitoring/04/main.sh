@@ -118,7 +118,7 @@ print_information() {
     IP_ADDRESS=$(echo "$IP_CIDR" | cut -d/ -f1)
     echo -e "${NAME_BG}${NAME_FG}IP${RESET} = ${VALUE_BG}${VALUE_FG}${IP_ADDRESS}${RESET}"
     echo -e "${NAME_BG}${NAME_FG}MASK${RESET} = ${VALUE_BG}${VALUE_FG}$(ipcalc "$IP_CIDR" | awk '/Netmask/ {print $2}')${RESET}"
-    echo -e "${NAME_BG}${NAME_FG}GATEWAY${RESET} = ${VALUE_BG}${VALUE_FG}$(ip route | grep "default via" | awk '{print $3}')${RESET}"
+    echo -e "${NAME_BG}${NAME_FG}GATEWAY${RESET} = ${VALUE_BG}${VALUE_FG}$(ip route | grep "default via" | awk '{print $3; exit}')${RESET}"
 
     # RAM storage information
     echo -e "${NAME_BG}${NAME_FG}RAM_TOTAL${RESET} = ${VALUE_BG}${VALUE_FG}$(free | awk '/Mem:/ {printf "%.3f GB", $2/1024/1024}')${RESET}"
