@@ -9,7 +9,7 @@ OCCUPATION="Software Engineering Student"
 lines() {
     for ((i = 0; i < $1; i++)); do
         echo -e "\n"
-        done
+    done
 }
 
 # Background colors
