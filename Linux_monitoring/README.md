@@ -1,5 +1,9 @@
-These are tasks from the third project(DO3_LinuxMonitoring v1.0). 
-Bash scripting.
+# DO3_LinuxMonitoring v1.0
 
-Shell is a program that allows interactions with the kernel through commands mostly in the terminal. 
-And a bash is a shell. The process of interacting with the OS called scripting.
+These tasks are part of the third project: **DO3_LinuxMonitoring v1.0**.
+
+A **shell** is a program that provides an interface for interacting with the operating system and its kernel.
+
+**Bash (Bourne Again Shell)** is one type of shell.
+
+**Shell scripting** is the process of writing and executing scripts containing shell commands to automate tasks.
