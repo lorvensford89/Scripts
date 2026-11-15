@@ -69,7 +69,13 @@ echo "Total number of folders (including all nested ones) = $ALLDIRS"
 
 DIRSIZE=$(du -h | sort -rh | head -5)
 echo "TOP 5 folders of maximum size arranged in descending order (path and size):"
-echo "$(du -h $1 | sort -rh | head -5 | awk '{print NR " - " $2 ", " $1}')"
+du -b "$1" 2>/dev/null | sort -rn | awk -F'\t' -v root="$1" '$2 != root' | head -5 | awk -F'\t' '{
+    size = $1
+    split("B KB MB GB", unit, " ")
+    i = 1
+    while (size >= 1024 && i < 4) { size = size / 1024; i++ }
+    printf "%d - %s/, %.2f %s\n", NR, $2, size, unit[i]
+}'
 
 echo "Total number of files = $(find "$1" -type f | wc -l)"
 
